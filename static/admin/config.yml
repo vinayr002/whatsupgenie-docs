@@ -1,10 +1,10 @@
-  backend:
-  name: git-gateway
+backend:
+  name: github
+  repo: vinayr002/whatsupgenie-docs
+  branch: main
 
 media_folder: "static/img"
 public_folder: "/img"
-
-publish_mode: editorial_workflow
 
 collections:
   - name: "docs"
@@ -13,16 +13,5 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
-
-  - name: "blog"
-    label: "Blog Posts"
-    folder: "blog"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Date", name: "date", widget: "datetime" }
-
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "body", label: "Body", widget: "markdown" }
